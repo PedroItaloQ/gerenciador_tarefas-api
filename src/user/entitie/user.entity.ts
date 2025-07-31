@@ -1,10 +1,10 @@
-import { Project } from 'src/project/entitie/project.entity';
+import { Project } from '../../project/entitie/project.entity';
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 
 @Entity()
 export class User {
   @PrimaryGeneratedColumn("uuid")
-  id: number;
+  id: string;
 
   @Column()
   name: string;

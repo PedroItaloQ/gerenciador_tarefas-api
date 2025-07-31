@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToOne, OneToMany } from 'typeorm';
 import { User } from '../../user/entitie/user.entity';
-import { Task } from 'src/task/entitie/task.entity';
+import { Task } from '../../task/entitie/task.entity';
 
 @Entity()
 export class Project {
