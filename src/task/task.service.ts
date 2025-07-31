@@ -62,10 +62,10 @@ export class TaskService {
   async findOne(id: string, user: User) {
     const task = await this.taskRepo.findOne({
       where: { id },
-      relations: ['projeto'],
+      relations: ['projeto', 'projeto.user'],
     });
 
-    if (!task || task.projeto.user.id !== user.id) {
+    if (!task || !task.projeto?.user || task.projeto.user.id !== user.id) {
       throw new NotFoundException('Tarefa não encontrada ou acesso negado');
     }
 
